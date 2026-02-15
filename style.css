@@ -200,6 +200,27 @@ h1 {
     background-color: var(--primary-btn-bg-hover);
 }
 
+.comments-section {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--container-border);
+}
+
+.comments-section h2 {
+    font-size: 1.35rem;
+    margin-bottom: 1rem;
+}
+
+#disqus_thread {
+    text-align: left;
+}
+
+.comments-section noscript {
+    display: block;
+    margin-top: 0.75rem;
+    color: var(--form-placeholder);
+}
+
 @media (max-width: 600px) {
     .container {
         width: 90%;
