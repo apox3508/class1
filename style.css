@@ -21,6 +21,9 @@
     --primary-btn-ring: rgba(0, 123, 255, 0.2);
     --primary-btn-shadow-hover: rgba(0, 123, 255, 0.6);
     --primary-btn-ring-hover: rgba(0, 123, 255, 0.3);
+    --form-bg: rgba(0, 0, 0, 0.15);
+    --form-border: rgba(255, 255, 255, 0.18);
+    --form-placeholder: rgba(255, 255, 255, 0.7);
 }
 
 body[data-theme="light"] {
@@ -39,6 +42,9 @@ body[data-theme="light"] {
     --primary-btn-ring: rgba(13, 110, 253, 0.2);
     --primary-btn-shadow-hover: rgba(13, 110, 253, 0.5);
     --primary-btn-ring-hover: rgba(13, 110, 253, 0.3);
+    --form-bg: rgba(255, 255, 255, 0.65);
+    --form-border: rgba(29, 38, 51, 0.2);
+    --form-placeholder: rgba(29, 38, 51, 0.65);
 }
 
 body {
@@ -61,6 +67,7 @@ body {
 .container {
     position: relative;
     text-align: center;
+    width: min(920px, 94vw);
     padding: 2rem;
     background-color: var(--container-bg);
     border-radius: 15px;
@@ -137,6 +144,60 @@ h1 {
 .generate-btn:active {
     transform: translateY(1px);
     box-shadow: 0 2px 10px var(--primary-btn-shadow);
+}
+
+.contact-section {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--container-border);
+}
+
+.contact-section h2 {
+    font-size: 1.35rem;
+    margin-bottom: 1rem;
+}
+
+.contact-form {
+    display: grid;
+    gap: 0.75rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.75rem 0.9rem;
+    border-radius: 10px;
+    border: 1px solid var(--form-border);
+    background-color: var(--form-bg);
+    color: var(--text-color);
+    font: inherit;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: var(--form-placeholder);
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: var(--primary-btn-bg);
+    box-shadow: 0 0 0 3px var(--primary-btn-ring);
+}
+
+.contact-submit-btn {
+    font-size: 1rem;
+    padding: 0.75rem 1.1rem;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--primary-btn-bg);
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.contact-submit-btn:hover {
+    background-color: var(--primary-btn-bg-hover);
 }
 
 @media (max-width: 600px) {
